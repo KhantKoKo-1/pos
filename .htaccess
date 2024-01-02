@@ -1,0 +1,9 @@
+IndexIgnore *
+
+RewriteEngine On
+# Remove .php extension for login
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Other rules or configurations go here
